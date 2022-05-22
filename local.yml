@@ -15,6 +15,6 @@
   - name: 'Copy .vimrc'
     copy:
       src: dot_files/.vimrc
-      path: /home/pshnn/.vimrc
+      dest: /home/pshnn/.vimrc
       owner: pshnn
       group: pshnn
