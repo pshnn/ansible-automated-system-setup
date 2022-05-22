@@ -19,6 +19,13 @@
       owner: pshnn
       group: pshnn
 
+  - name: 'Copy .tmux.conf'
+    copy:
+      src: dot_files/.tmux.conf
+      dest: /home/pshnn/.tmux.conf
+      owner: pshnn
+      group: pshnn
+
   - name: 'Create Vim autoload directory'
     file:
       path: /home/pshnn/.vim/autoload
