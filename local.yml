@@ -7,4 +7,4 @@
   tasks:
   - name: 'Install htop'
     package:
-      - htop
+      name: htop
