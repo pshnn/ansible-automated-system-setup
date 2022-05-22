@@ -11,3 +11,10 @@
         - htop
         - vim
         - tmux
+
+  - name: 'Copy .vimrc'
+    copy:
+      src: dot_files/.vimrc
+      path: /home/pshnn/.vimrc
+      owner: pshnn
+      group: pshnn
