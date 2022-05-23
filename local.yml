@@ -54,7 +54,7 @@
       dest: /home/pshnn/install_nvm.sh
 
   - name: 'Run nvm installation script'
-    shell: /home/pshnn/install_nvm.sh
+    script: /home/pshnn/install_nvm.sh
     args:
       creates: /home/pshnn/.nvm/nvm.sh
 
