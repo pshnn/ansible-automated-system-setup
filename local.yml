@@ -50,8 +50,6 @@
       group: pshnn
 
   - name: 'Install nvm'
-    shell: >
-      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh |
-      bash
+    shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
     args:
       creates: /home/pshnn/.nvm/nvm.sh
