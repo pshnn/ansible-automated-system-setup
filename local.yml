@@ -12,6 +12,7 @@
         - vim
         - tmux
         - keepassxc
+        - curl
 
   - name: 'Copy .vimrc'
     copy:
