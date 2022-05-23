@@ -12,7 +12,6 @@
         - vim
         - tmux
         - keepassxc
-        - curl
 
   - name: 'Copy .vimrc'
     copy:
@@ -49,7 +48,19 @@
       owner: pshnn
       group: pshnn
 
-  - name: 'Install nvm'
-    shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  - name: 'Download nvm installation script'
+    get_url:
+      url: 'https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh'
+      dest: /home/pshnn/install_nvm.sh
+      owner: pshnn
+      group: pshnn
+
+  - name: 'Run nvm installation script'
+    shell: /home/pshnn/install_nvm.sh
     args:
       creates: /home/pshnn/.nvm/nvm.sh
+
+  - name: 'Remove nvm installation script'
+    file:
+      path: /home/pshnn/install_nvm.sh
+      state: absent
