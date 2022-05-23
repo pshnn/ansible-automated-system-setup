@@ -52,8 +52,6 @@
     get_url:
       url: 'https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh'
       dest: /home/pshnn/install_nvm.sh
-      owner: pshnn
-      group: pshnn
 
   - name: 'Run nvm installation script'
     shell: /home/pshnn/install_nvm.sh
