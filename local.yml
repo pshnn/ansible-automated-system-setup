@@ -28,6 +28,13 @@
       owner: pshnn
       group: pshnn
 
+  - name: 'Copy .bashrc'
+    copy:
+      src: dot_files/.bashrc
+      dest: /home/pshnn/.bashrc
+      owner: pshnn
+      group: pshnn
+
   - name: 'Create Vim autoload directory'
     file:
       path: /home/pshnn/.vim/autoload
@@ -41,3 +48,8 @@
       dest: /home/pshnn/.vim/autoload/plug.vim
       owner: pshnn
       group: pshnn
+
+  - name: 'Install nvm'
+    shell: >
+      curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh |
+      bash
